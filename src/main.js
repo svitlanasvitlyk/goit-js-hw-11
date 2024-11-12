@@ -14,10 +14,10 @@ searchForm.addEventListener('submit', e => {
   loadingSpinner.style.display = 'block';
 
   const params = new URLSearchParams({
-    key: '46706614-1dc051161d475bf769026fdc5',
-    q: query,
-    image_type: 'photo',
-    orientation: 'horizontal',
+    key: '47040880-6387dd83a064ed0d7a9fde087',
+    q: `${searchRequest}`,
+    image_type: photo,
+    orientation: horizontal,
     safesearch: true,
     per_page: 9,
   });

@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Searching pictures</title>
+    <title>Image Search</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
-    <form class="form" action="/search" method="GET">
+    <form id="search-form" action="/search" method="GET">
       <input
-        class="search-input"
+        id="search-box"
         type="text"
         name="query"
-        placeholder="Search images..."
+        placeholder="Find pictures..."
       />
-      <button class="submit-button" type="submit">Search</button>
+      <button id="search-button" type="submit">Search</button>
     </form>
-    <ul class="photo-list"></ul>
-    <div class="loader" style="display: none"></div>
+    <ul id="photo-list"></ul>
+    <div id="loading" style="display: none"></div>
     <script type="module" src="./main.js" defer></script>
   </body>
 </html>

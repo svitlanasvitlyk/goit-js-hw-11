@@ -1,15 +1,12 @@
-export function fetchPhotos(searchParams) {
+function getPhotos(searchParams) {
   const url = `https://pixabay.com/api/?${searchParams}`;
 
-  return fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Error ${response.status}: ${response.statusText}`);
-      }
-      return response.json();
-    })
-    .catch(error => {
-      console.error('Error fetching photos:', error);
-      throw error;
-    });
+  return fetch(url).then(response => {
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    return response.json();
+  });
 }
+
+export default getPhotos;
